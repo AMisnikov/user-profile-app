@@ -1,0 +1,8 @@
+export const SET_FIELD = 'SET_FIELD';
+
+export const SET_FORM_VALIDITY = 'SET_FORM_VALIDITY';
+
+export const SET_FORM_ERROR = 'SET_FORM_ERROR';
+
+export const SET_FETCHING_STATUS = 'SET_FETCHING_STATUS';
+

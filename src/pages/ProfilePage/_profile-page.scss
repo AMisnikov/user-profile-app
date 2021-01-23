@@ -1,0 +1,36 @@
+.profile-page {
+    background-color: #ededed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+
+    &__wrapper {
+        flex: 1 1 auto;
+        padding: 4rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 500px) {
+            padding: 1.5rem;
+        }
+
+        & > *:not(:last-child):not(.contacts-page__heading) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__body {
+
+        & > *:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+}

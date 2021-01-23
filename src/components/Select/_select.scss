@@ -1,0 +1,23 @@
+.select {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        margin-bottom: 7px;
+        font-size: 1.8rem;
+        color: #000;
+    }
+
+    &__field {
+        padding: 1rem;
+        font-size: 2rem;
+        color: #000;
+        border: 1px solid #dfdfdf;
+        outline: none;
+        transition: all .2s;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+}

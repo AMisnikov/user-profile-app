@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$LfzWU6L.tr1TdMBUlnNoxek0xXAwmRs8PqQIGXbKkR6Cpt6fwDDV.",
+      "id": 1
+    },
+    {
+      "email": "ivan.ivanov@gmail.com",
+      "password": "$2a$10$k6G3TgGwy5OdMPoxlGIfoOVJZMwZCfl4/TIXVyxlg7QXrAlNKpepi",
+      "id": 2
+    }
+  ],
+  "data": [
+    {
+      "userId": "1",
+      "type": "E-mail",
+      "value": "test123@gmail.com",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "type": "Телефон",
+      "value": "+79991112233",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "type": "Адрес",
+      "value": "Москва",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "type": "Skype",
+      "value": "test-skype",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "type": "E-mail",
+      "value": "testtestovich@gmail.com",
+      "id": 5
+    },
+    {
+      "userId": "2",
+      "type": "E-mail",
+      "value": "ivan12343456@bk.ru",
+      "id": 6
+    },
+    {
+      "userId": "2",
+      "type": "Телефон",
+      "value": "22-33-44",
+      "id": 7
+    },
+    {
+      "userId": "2",
+      "type": "Адрес",
+      "value": "Хабаровск",
+      "id": 8
+    },
+    {
+      "userId": "2",
+      "type": "VK",
+      "value": "iv222444422",
+      "id": 9
+    }
+  ]
+}
