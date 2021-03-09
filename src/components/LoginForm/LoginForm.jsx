@@ -2,16 +2,14 @@ import React, {useReducer, useEffect} from "react";
 import { connect } from 'react-redux';
 import { startLogin } from '../../redux/actions/authActions';
 import Loader from '../Loader/Loader.jsx';
-import Button from "../Button/Button.jsx";
+import { Button } from "../Button/Button.jsx";
+import { StyledLoginForm } from './LoginForm.styles.jsx';
 import Input from "../Input/Input.jsx";
 import FormAlert from '../FormAlert/FormAlert.jsx';
 import formReducer from '../../formValidation/formReducer';
 import validationSchema from '../../formValidation/validationSchema';
 import { setField, setFormValidity, setFormErr, setFetchingStatus } from '../../formValidation/formActions';
 import { getFieldErrors } from '../../formValidation/validationHelpers';
-
-
-import "./_login-form.scss";
 
 
 const initialState = {
@@ -95,8 +93,8 @@ const LoginForm = ({ logIn }) => {
   };
 
   return (
-    <div className="login-form">
-    <form onSubmit={handleSubmit} action="#" method="POST" noValidate className="login-form__form">
+    <div>
+    <StyledLoginForm onSubmit={handleSubmit} action="#" method="POST" noValidate >
         <Input 
             className={ state.login.errors.length > 0 ? 'input--invalid' : ''}
             labelText="E-mail"
@@ -121,15 +119,20 @@ const LoginForm = ({ logIn }) => {
         />
       <Button 
         disabled={ !state.isFormValid || state.isFetching || state.formErr ? true : false} 
-        className="btn--black login-form__submit" 
+        color="#000000"
+        textColor="#fff"
         type="submit" 
+        style={{
+          position: 'relative',
+          minHeight: '4.84rem' 
+        }}
 
         >
         { state.isFetching ? <Loader size={20} /> : 'Войти'}
         </Button>
 
         {state.formErr && <FormAlert>{state.formErr}</FormAlert> }
-    </form>
+    </StyledLoginForm>
   </div>
   );
 };

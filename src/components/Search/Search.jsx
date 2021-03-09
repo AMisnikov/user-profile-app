@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import { updateFilters } from '../../redux/actions/filtersActions';
 import Input from '../Input/Input.jsx';
 
-import './_search.scss';
 
-const Search = ({ className, searchText, updateFilters}) => {
+const Search = ({  searchText, updateFilters}) => {
 
     const handleInputChange = (e) => {
         const searchText = e.target.value;
@@ -13,7 +12,7 @@ const Search = ({ className, searchText, updateFilters}) => {
     };
 
     return (
-        <div className={ className ? `search ${ className }` : 'search' }>
+        <div>
             <Input onChange={handleInputChange} id="search-field" name="search" type="text" placeholder="Поиск..." value={searchText}/>
         </div>
     );

@@ -1,23 +1,23 @@
 import React from 'react';
+import { SpinnerBlade, SpinnerElement } from './Loader.styles.jsx';
 
-import './_loader.scss';
 
 const Loader = ({ size }) => (
    
-    <div className="spinner center" style={{fontSize: size}}>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-    </div>
+    <SpinnerElement size={`${size}px`}>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+        <SpinnerBlade></SpinnerBlade>
+    </SpinnerElement>
     
 );
 

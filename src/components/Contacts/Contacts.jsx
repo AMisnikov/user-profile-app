@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/selectors/contacts';
 import { startSetContacts } from '../../redux/actions/contactsActions';
 import ContactItem from '../ContactItem/ContactItem.jsx';
-
-import './_contacts.scss';
+import { ContactsElement } from './Contacts.styles.jsx';
 
 
 const Contacts = ({ contacts, fetchContacts }) => {
@@ -26,15 +25,15 @@ const Contacts = ({ contacts, fetchContacts }) => {
 
 
     return (
-        <div className="contacts" >
-            <ul className="contacts__list">
+        <ContactsElement >
+            <ul>
                 { contacts.length > 0 ? (
                     contacts.map((item, index) => <ContactItem id={item.id} type={item.type} value={item.value} key={index} />)
                 ) : (
                     <p>{message}</p>
                 )}
             </ul>
-        </div>
+        </ContactsElement>
     );
 };
 

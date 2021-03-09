@@ -1,16 +1,23 @@
-import React from 'react';
-import Search from '../Search/Search.jsx';
-import User from '../User/User.jsx';
-
-import './_header.scss';
+import React from "react";
+import Search from "../Search/Search.jsx";
+import User from "../User/User.jsx";
+import {
+  HeaderElement,
+  HeaderWrapper,
+  HeaderColumn,
+} from "./Header.styles.jsx";
 
 const Header = () => (
-    <header className="header">
-        <div className="header__wrapper">
-            <Search className="header__column" />
-            <User className="header__column" />        
-        </div>
-    </header>
+  <HeaderElement>
+    <HeaderWrapper>
+      <HeaderColumn>
+        <Search />
+      </HeaderColumn>
+      <HeaderColumn>
+        <User />
+      </HeaderColumn>
+    </HeaderWrapper>
+  </HeaderElement>
 );
 
 export default Header;

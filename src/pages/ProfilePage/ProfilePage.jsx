@@ -2,21 +2,19 @@ import React from 'react';
 import Header from '../../components/Header/Header.jsx';
 import Contacts from '../../components/Contacts/Contacts.jsx';
 import ContactForm from '../../components/ContactForm/ContactForm.jsx';
-
-
-import './_profile-page.scss';
+import { ProfilePageBody, ProfilePageElement, ProfilePageHeading, ProfilePageWrapper } from './ProfilePage.styles.jsx';
 
 const ProfilePage = () => (
-    <div className="profile-page">
-        <div className="profile-page__wrapper">
-            <h1 className="heading-primary profile-page__heading">Личный кабинет пользователя</h1>
+    <ProfilePageElement>
+        <ProfilePageWrapper>
+            <ProfilePageHeading>Личный кабинет пользователя</ProfilePageHeading>
             <Header />
-            <main className="profile-page__body">
+            <ProfilePageBody>
                 <Contacts />
                 <ContactForm />
-            </main>
-        </div>
-    </div>
+            </ProfilePageBody>
+        </ProfilePageWrapper>
+    </ProfilePageElement>
 );
 
 export default ProfilePage;

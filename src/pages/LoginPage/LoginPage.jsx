@@ -1,16 +1,19 @@
 import React from 'react';
+import { LoginPageContainer, LoginPageWrapper } from './LoginPage.styles.jsx';
+import { HeadingPrimary } from '../../components/HeadingPrimary/HeadingPrimary.jsx';
 import LoginForm from '../../components/LoginForm/LoginForm.jsx';
 
-import './_login-page.scss';
+
+
 
 
 const LoginPage = () => (
-    <div className="login-page">
-        <div className="login-page__wrapper">
-            <h1 className="heading-primary">Войдите в систему</h1>
+    <LoginPageContainer>
+        <LoginPageWrapper>
+            <HeadingPrimary>Войдите в систему</HeadingPrimary>
             <LoginForm />  
-        </div>
-    </div>
+        </LoginPageWrapper>
+    </LoginPageContainer>
 );
 
 export default LoginPage;

@@ -1,23 +1,24 @@
 import React from "react";
+import { InputContainer, InputField, InputLabel, InputErrors } from './Input.styles.jsx';
 
-import "./_input.scss";
 
-const Input = ({ className, id, labelText, errors, ...otherProps }) => (
-  <div className={className ? `input ${className}` : "input"}>
-    <input className="input__field" id={id} {...otherProps} />
+
+const Input = ({ id, labelText, errors, ...otherProps }) => (
+  <InputContainer errors={errors}>
+    <InputField id={id} {...otherProps} />
     {labelText && (
-      <label htmlFor={id} className="input__label">
+      <InputLabel htmlFor={id}>
         {labelText}
-      </label>
+      </InputLabel>
     )}
     {errors &&
       errors.length > 0 &&
       errors.map((error, index) => (
-        <p key={index} className="input__error">
+        <InputErrors key={index}>
           {error}
-        </p>
+        </InputErrors>
       ))}
-  </div>
+  </InputContainer>
 );
 
 export default Input;

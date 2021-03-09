@@ -1,14 +1,15 @@
 import React from 'react';
+import { Button } from '../../components/Button/Button.jsx';
 import { Link } from 'react-router-dom';
+import { NonFoundPageContainer, NonFoundPageTopEl, NonFoundPageBottomEl } from './NotFounfPage.styles.jsx';
 
-import './_not-found-page.scss';
 
 const NotFoundPage = () => (
-    <div className="not-found-page">
-        <div className="not-found-page__top">404</div>
-        <div className="not-found-page__bottom">Страница не найдена</div>
-        <Link to='/' className="btn btn--black" >Вернуться на главную</Link>
-    </div>
+    <NonFoundPageContainer>
+        <NonFoundPageTopEl>404</NonFoundPageTopEl>
+        <NonFoundPageBottomEl>Страница не найдена</NonFoundPageBottomEl>
+        <Button as={Link} to='/' color="#000" textColor='#fff' > Вернуться на главную </Button>
+    </NonFoundPageContainer>
 );
 
 export default NotFoundPage;
